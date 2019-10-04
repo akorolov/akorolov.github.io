@@ -1,6 +1,6 @@
 # akorolov.github.io
 
 Goals:
-* Editable character names
+* HP options (with calculator? the dream)
 * Save character list?
-* Conditions
+* Something to mark conditions

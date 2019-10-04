@@ -34,6 +34,10 @@ body {
     border-bottom: 1px solid #EFEFEF;
     box-sizing: border-box;
     -webkit-user-select: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .secret {
@@ -48,6 +52,10 @@ body {
   background-color: transparent;
   border: 1px solid #f3f3f3;
   color: #ddd;
+}
+
+.right {
+  text-align: right;
 }
 
 .text-input {

@@ -64,11 +64,8 @@ const ExampleVue = {
       this.items.splice(index, 1);
     },
     updateCharacter: function(item) {
-      console.log(item);
       var index = this.items.indexOf(item);
-      console.log(index);
       this.items[index] = newname;
-      console.log(this.items);
     },
   },
   template: `
@@ -85,7 +82,7 @@ const ExampleVue = {
   },
   data() {
   return {
-    items: ['Example Character (click to change my name)','Drag and drop to rearrange'],
+    items: ['Example Character (click to change name)','Drag and drop to rearrange'],
   };
 }
 };

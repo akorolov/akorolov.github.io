@@ -36,7 +36,7 @@ body {
     -webkit-user-select: none;
 }
 
-.list li .delete {
+.delete {
   background-color: transparent;
   border: 1px solid #f3f3f3;
   color: #ddd;

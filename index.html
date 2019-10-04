@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
  <head>
 <title>No-Frills Initiative Tracker</title>
@@ -12,10 +13,8 @@
 <div class="page">
 
 <div class="header">
-  <div class="row", style="height: 120px; overflow: hidden; justify-content: space-between;">
-      <div class="col-m">
+  <div class="row", style="height: 120px; overflow: hidden; justify-content: center;">
         <h2 id="narr_head">Initiative Tracker</h2>
-      </div>
 
       <!-- <div class="col-r", style="justify-content: flex-end">
         <div id="logger"></div>
@@ -28,44 +27,26 @@
   <div class="row">
   <div class="pager">
   <div class="col-m">
-
+      <div id="root">No characters yet!</div><br>
+      <!-- <div id="charinput">
+      <input type="text" placeholder="Add a character name" autofocus class="text-input" v-model="newName" v-on:keyup.enter="addCharacter">
+    </div> -->
+  </div>
 
   </div>
 
 
 
-    <div class="col-r">
 
-        <div id="right-bar">
-          <h3>Time</h3>
-          <div id="gametime">
-          </div>
-
-          <h3>Resources</h3>
-          <div>
-            Fish: <span id="sidefish">0</span>
-          </div>
-
-          <h3>Fishing Tools</h3>
-          <div id="fishtools">
-            You don't have any fishing tools yet!
-          </div>
-
-
-          <h3>Collectibles</h3>
-          <div id="inventory">
-            You don't have any collectibles yet!
-          </div>
-
-        </div>
-
-    </div>
 
 </div>
 </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
+<script src="https://unpkg.com/vue-slicksort@latest/dist/vue-slicksort.min.js"></script>
 
+<script src="tracks.js" charset="utf-8" type="text/javascript"></script>
 
 
 

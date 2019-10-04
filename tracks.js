@@ -65,7 +65,7 @@ const ExampleVue = {
       <SortableList lockAxis="y" v-model="items">
         <SortableItem v-for="(item, index) in items" :index="index" :key="index" :item="item" @removed='removeCharacter(item)'/>
       </SortableList><br>
-      <input type="text" placeholder="Add a character name" autofocus class="text-input" v-model="newName" v-on:keyup.enter="addCharacter">
+      <input type="text" placeholder="Add a character" autofocus class="text-input" v-model="newName" v-on:keyup.enter="addCharacter">
     </div>
   `,
   components: {
@@ -74,7 +74,7 @@ const ExampleVue = {
   },
   data() {
   return {
-    items: ['Example Character (click to change my name)'],
+    items: ['Example Character (click to change my name)','Drag and drop to rearrange'],
   };
 }
 };

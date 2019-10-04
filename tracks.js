@@ -20,6 +20,7 @@ const SortableList = {
 };
 
 var newname = "";
+var prevname = "";
 
 const SortableItem = {
   mixins: [ElementMixin],
@@ -45,7 +46,6 @@ const SortableItem = {
       this.item = this.newerName;
       newname = this.newerName;
       this.$emit('updated');
-      this.newerName = "";
     }
   }
 };
@@ -65,8 +65,12 @@ const ExampleVue = {
       this.items.splice(index, 1);
     },
     updateCharacter: function(item) {
-      var index = this.items.indexOf(item);
+      if (this.items.indexOf(item) > -1) {
+        prevname = item;
+      }
+      var index = this.items.indexOf(prevname);
       this.items[index] = newname;
+      prevname = newname;
     },
   },
   template: `

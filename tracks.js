@@ -74,7 +74,7 @@ const ExampleVue = {
   },
   data() {
   return {
-    items: [],
+    items: ['Example Character (click to change my name)'],
   };
 }
 };

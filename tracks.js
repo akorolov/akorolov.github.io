@@ -23,8 +23,13 @@ const SortableItem = {
   mixins: [ElementMixin],
   props: ['item'],
   template: `
-    <li class="list-item">{{item}}</li>
-  `
+    <li class="list-item">{{item}} <button class="delete" v-on:click="remove">X</button></li>
+  `,
+  methods: {
+    remove: function() {
+      this.$emit('removed');
+    },
+  }
 };
 
 
@@ -38,11 +43,15 @@ const ExampleVue = {
       this.items.push(this.newName);
       this.newName = "";
     },
+    removeCharacter: function(item) {
+      var index = this.items.indexOf(item);
+      this.items.splice(index, 1);
+    },
   },
   template: `
     <div class="root">
       <SortableList lockAxis="y" v-model="items">
-        <SortableItem v-for="(item, index) in items" :index="index" :key="index" :item="item"/>
+        <SortableItem v-for="(item, index) in items" :index="index" :key="index" :item="item" @removed='removeCharacter(item)'/>
       </SortableList><br>
       <input type="text" placeholder="Add a character name" autofocus class="text-input" v-model="newName" v-on:keyup.enter="addCharacter">
     </div>

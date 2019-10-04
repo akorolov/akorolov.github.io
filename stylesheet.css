@@ -36,6 +36,12 @@ body {
     -webkit-user-select: none;
 }
 
+.list li .delete {
+  background-color: transparent;
+  border: 1px solid #f3f3f3;
+  color: #ddd;
+}
+
 .text-input {
   border: 1px solid #dedede;
   padding-left: 10px;

@@ -23,12 +23,25 @@ const SortableItem = {
   mixins: [ElementMixin],
   props: ['item'],
   template: `
-    <li class="list-item">{{item}} <button class="delete" v-on:click="remove">X</button></li>
+    <li class="list-item"><button class="secret" v-on:click="activateInEditMode" v-show="!isEditing">{{item}}</button><span v-show="isEditing" ><input v-model="newerName" type="text" class="text-input2" v-on:keyup.enter="updateCharacter"></span>  <button class="delete" v-on:click="remove">X</button></li>
   `,
+  data() {
+  return {
+    newerName: "",
+    isEditing: false,
+  };
+},
   methods: {
     remove: function() {
       this.$emit('removed');
     },
+    activateInEditMode: function() {
+        this.isEditing = true
+    },
+    updateCharacter: function() {
+      this.isEditing = false;
+      this.item = this.newerName;
+    }
   }
 };
 
@@ -39,7 +52,6 @@ const ExampleVue = {
   props: ['newName'],
   methods: {
     addCharacter: function () {
-      console.log('heyo');
       this.items.push(this.newName);
       this.newName = "";
     },
@@ -62,7 +74,7 @@ const ExampleVue = {
   },
   data() {
   return {
-    items: []
+    items: [],
   };
 }
 };

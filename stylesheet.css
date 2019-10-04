@@ -36,6 +36,14 @@ body {
     -webkit-user-select: none;
 }
 
+.secret {
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Bitter', serif;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+}
 .delete {
   background-color: transparent;
   border: 1px solid #f3f3f3;
@@ -46,6 +54,14 @@ body {
   border: 1px solid #dedede;
   padding-left: 10px;
   width: 100%;
+  height: 35px;
+  color: #555;
+}
+
+.text-input2 {
+  border: 1px solid #dedede;
+  padding-left: 10px;
+  width: 90%;
   height: 35px;
   color: #555;
 }
@@ -74,51 +90,6 @@ div.page {
   flex-direction: row;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #d9d9d9;
-  color: #000;
-  text-align: center;
-  padding: 5px 1px;
-  border-radius: 6px;
-  opacity: 0.8;
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  right: 105%;
-}
-
-.tooltip .qtooltiptext {
-  visibility: hidden;
-  width: 200px;
-  background-color: #d9d9d9;
-  color: #000;
-  text-align: center;
-  padding: 5px 1px;
-  border-radius: 6px;
-  opacity: 0.8;
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  right: 105%;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-.tooltip:hover .qtooltiptext {
-  visibility: visible;
-}
-
 
 * {
   box-sizing: border-box;
@@ -127,17 +98,6 @@ div.page {
 
 .col-n {width: 550px; padding: 5px;}
 .col-m {min-width: 400px;}
-.col-r {width: 200px; padding: 10px;}
-
-.col-1 {width: 150px;}
-.col-2 {width: 300px;}
-.col-3 {width: 450px;}
-.col-4 {width: 600px;}
-.col-5 {width: 750px;}
-.col-6 {width: 900px;}
-.col-7 {width: 1050px;}
-.col-8 {width: 1200px;}
-.col-9 {width: 1350px;}
 
 
 [class*="col-"] {
@@ -152,28 +112,6 @@ div.page {
 }
 
 
-#logger {
-  width: 400px;
-  height: 80px;
-  background-image: linear-gradient(to top, rgba(240, 240, 240,1), rgba(240, 240, 240,0));
-  border-radius: 5px;
-  padding: 10px 20px;
-  text-align: right;
-}
-
-#navigateButtons {
-  margin: 0;
-  text-align: left;
-}
-
-#narrative {
-  width: 500px;
-  background: #fff;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-  border-radius: 15px 50px;
-}
 
 #narr_head {
   max-width: 300px;
@@ -222,16 +160,4 @@ button.nav {
   border-radius: 5px;
   width: 150px;
   font-family: 'Bitter', serif;
-}
-
-#right-bar {
-  background-color: #fff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
-  width: 150px;
-
 }

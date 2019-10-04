@@ -45,6 +45,7 @@ const SortableItem = {
       this.item = this.newerName;
       newname = this.newerName;
       this.$emit('updated');
+      this.newerName = "";
     }
   }
 };

@@ -1,6 +1,6 @@
 # akorolov.github.io
 
-!Goals:
+Goals:
 * Editable character names
 * Save character list?
 * Conditions

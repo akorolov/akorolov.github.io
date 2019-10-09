@@ -47,6 +47,7 @@ body {
     border: none;
     margin: 0;
     text-decoration: none;
+    background-color: #fff;
 }
 .delete {
   background-color: transparent;
